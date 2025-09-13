@@ -197,6 +197,16 @@ footer section > * + * {
 
 /* Blocks */
 /*****************************************************************************/
+.banner {
+  position: relative;
+  min-height: 550px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+  width: 100%;
+}
+
 .content {
   margin-top: var(--space-2xl);
   max-width: 65ch;
