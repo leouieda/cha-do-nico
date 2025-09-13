@@ -10,7 +10,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Chá do Nico" />
   <meta property="og:description" content="Chá de bebê do Nico, filho da Carol e do Leo" />
-  <meta property="og:image" content="{{ config.url }}/{{ config.thumbnail }}" />
+  <meta property="og:image" content="https://chadonico.uieda.com/assets/card.jpg" />
   <meta property="og:url" content="https://chadonico.uieda.com" />
 
   <!-- Load fonts -->
@@ -22,6 +22,14 @@
 
   <!-- Main CSS stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Leaflet -->
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
 
   <!-- Plausible analytics for anonymous usage statistics -->
   <script defer data-domain="chadonico.uieda.com" src="https://plausible.io/js/plausible.js"></script>
@@ -42,21 +50,47 @@
       Venha comemorar conosco a chegada do irmãozinho da Yara com comidinhas,
       conversa boa e muita diversão.
     </p>
-    <!-- <h2>O evento</h2> -->
 
     <h2>Quando</h2>
 
+    <p>
+    Marque no calendário!
+    <br>
+    Sábado, <strong>18 de outubro de 2025</strong> às 14:00.
+    </p>
+
     <h2>Onde</h2>
 
+    <p>
+    Salão de festas do <b>Edifício Spotlight</b>:
+    <br>
+    Rua Camargo, 396
+    <br>
+    Butantã - São Paulo - SP
+    <br>
+    05510-050
+    <p>
+
+    <div id="map"></div>
+    <script>
+      var map = L.map('map').setView([-23.570592845489927, -46.70879729812151], 18);
+      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 19,
+          attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      }).addTo(map);
+      var marker = L.marker([-23.570592845489927, -46.70879729812151]).addTo(map);
+      marker.bindPopup("<b>Edifício Spotlight</b><br>Rua Camargo, 396<br>Butantã - São Paulo - SP<br>05510-050").openPopup();
+    </script>
+
+
     <h2>Confirmar presença</h2>
-    <!-- <div class="callout"> -->
-      <p>
-      Não se esqueça de
-      <a href="https://forms.gle/TGjVV4Hv9dLjYRnT8">confirmar presença nesse
-        link</a>
-      até dia XX de outubro!
-      </p>
-    <!-- </div> -->
+
+    <p>
+    Não se esqueça de
+    <a href="https://forms.gle/TGjVV4Hv9dLjYRnT8">confirmar presença nesse
+      link</a>
+    até dia XX de outubro!
+    </p>
 
     <h2>Presentes e doações</h2>
 
