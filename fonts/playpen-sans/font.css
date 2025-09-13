@@ -1,0 +1,8 @@
+/* Define the Playpen Sans font */
+
+@font-face {
+	font-family: 'Playpen Sans';
+	src: url('PlaypenSans-Bold.ttf');
+	font-weight: bold;
+	font-style: normal;
+}
