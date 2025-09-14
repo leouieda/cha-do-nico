@@ -42,59 +42,97 @@
   </header>
 
   <main class="flow content">
+
     <h1>Chá do Nico</h1>
     <p class="extra-space font-large">
       <strong>Nico está chegando em breve!</strong>
     </p>
-    <p class="font-large">
+    <p>
       Venha comemorar conosco a chegada do irmãozinho da Yara com comidinhas,
       conversa boa e muita diversão.
     </p>
 
     <h2>Quando</h2>
-
     <p>
-    Marque no calendário!
-    <br>
-    Sábado, <strong>18 de outubro de 2025</strong> às 14:00.
+      Marque no calendário:
+      <br>
+      Sábado, <strong>18 de outubro de 2025</strong> às 14h.
     </p>
 
     <h2>Onde</h2>
-
     <p>
-    Salão de festas do <b>Edifício Spotlight</b>:
-    <br>
-    Rua Camargo, 396
-    <br>
-    Butantã - São Paulo - SP
-    <br>
-    05510-050
+      Salão de festas do <b>Edifício Spotlight</b>:
+    </p>
+    <div class="callout">
+      <p>
+        Rua Camargo, 396
+        <br>
+        Butantã - São Paulo - SP
+        <br>
+        05510-050
+      </p>
+    </div>
     <p>
+      Longitude, latitude (WGS84):
+      <br>
+      -46.70880, -23.57053
+    </p>
 
     <div id="map"></div>
     <script>
-      var map = L.map('map').setView([-23.570592845489927, -46.70879729812151], 18);
+      var map = L.map('map').setView([-23.57053, -46.70880], 18);
       L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
           maxZoom: 19,
           attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
       }).addTo(map);
-      var marker = L.marker([-23.570592845489927, -46.70879729812151]).addTo(map);
+      var marker = L.marker([-23.57053, -46.70880]).addTo(map);
       marker.bindPopup("<b>Edifício Spotlight</b><br>Rua Camargo, 396<br>Butantã - São Paulo - SP<br>05510-050").openPopup();
     </script>
 
-
     <h2>Confirmar presença</h2>
-
     <p>
-    Não se esqueça de
-    <a href="https://forms.gle/TGjVV4Hv9dLjYRnT8">confirmar presença nesse
-      link</a>
-    até dia XX de outubro!
+      Não se esqueça de
+      <a href="https://forms.gle/TGjVV4Hv9dLjYRnT8">confirmar presença nesse
+        link</a>
+      até dia <strong>13 de outubro</strong>!
     </p>
 
     <h2>Presentes e doações</h2>
+    <p>
+      Nosso apartamento é pequeno e em breve estaremos de mudança.
+      Além disso, a Yara teve muitos problemas de alergia a fraldas então
+      teremos que testar diferentes marcas com o Nico.
+    </p>
+    <p>
+      Por isso, nos ajudaria mais receber <strong>contribuições
+      monetárias 💰</strong> do que presentes. Doações de <strong>coisas
+      usadas 🧸</strong> também são bem-vindas para evitar o desperdício!
+    </p>
+    <div class="callout flow">
+      <p>
+      <strong>PIX:</strong> chadonico@uieda.com
+      </p>
+      <p>
+        <img src="assets/pix.png" style="max-width: 400px; margin: auto;">
+      </p>
+    </div>
+
 
     <h2>Agradecimentos</h2>
+    <p>
+      À Ciça por organizar os doces e decorações, à família Sanches (Tia Helô,
+      Simone, Tia Valéria) por organizarem as brincadeiras, e à nossa família
+      e amigos que são a nossa vila (afinal, precisa-se de vila para criar uma
+      criança — agora duas!).
+    </p>
+    <p>
+      <strong>Obrigado!</strong>
+      <br>
+      ❤️
+    </p>
+    <p class="font-fancy color-secondary font-bold">
+       Carol, Leo e Yara
+    </p>
   </main>
 
   <footer class="flow">
