@@ -167,7 +167,7 @@ iframe {
 }
 
 :is(h1, h2, h3, blockquote, hr) {
-  --flow-space: 1.5em;
+  --flow-space: 2em;
 }
 
 hr {
